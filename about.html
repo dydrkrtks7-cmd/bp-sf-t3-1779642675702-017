@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-neon-void">
+    <title>백링크 자동화 프로그램 | 정보 - 마포 LLM비교</title>
+    <meta name="description" content="마포에서 개발한 LLM비교 기반 백링크 자동화 프로그램. 지루한 수동 작업은 그만. 브루탈리스트 감성으로 돌직구 백링크 파워를 느껴봐. 전화 010-6279-0862">
+    <meta name="keywords" content="백링크 자동화 프로그램, LLM비교, 마포, 백링크 생성, 링크빌딩, 자동 백링크, pbn, 브루탈리스트">
+    <link rel="canonical" href="https://sf-t3-1779642675702-017.vercel.app/info">
+    <meta property="og:title" content="백링크 자동화 프로그램 | LLM비교 마포 - 정보">
+    <meta property="og:description" content="돌직구 백링크 파워! 마포 LLM비교 기반 자동화 프로그램. 클릭 한 번으로 끝.">
+    <style>
+        /* RESET & BASE */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        a {
+            color: #ff007f;
+            text-decoration: none;
+            border-bottom: 2px solid #ff007f;
+        }
+        a:hover {
+            color: #00ffcc;
+            border-bottom-color: #00ffcc;
+        }
+        ul {
+            list-style: none;
+        }
+        /* TYPOGRAPHY */
+        h1, h2, h3, h4 {
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #00ffcc;
+        }
+        h1 {
+            font-size: 2.5rem;
+            border-left: 8px solid #ff007f;
+            padding-left: 20px;
+            margin: 40px 0 20px;
+            text-shadow: 4px 4px 0 #ff007f;
+        }
+        h2 {
+            font-size: 1.8rem;
+            border-bottom: 4px solid #ff007f;
+            padding-bottom: 10px;
+            margin: 30px 0 15px;
+        }
+        h3 {
+            font-size: 1.3rem;
+            color: #ffaa00;
+            margin: 20px 0 10px;
+        }
+        p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        .mono {
+            font-family: 'Courier New', Courier, monospace;
+            background: #1a1a1a;
+            padding: 2px 6px;
+            border: 1px solid #333;
+        }
+        /* LAYOUT */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #111;
+            border: 3px solid #ff007f;
+            box-shadow: 10px 10px 0 #ff007f;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+                box-shadow: 5px 5px 0 #ff007f;
+            }
+        }
+        /* NAV */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 3px solid #ff007f;
+            margin-bottom: 30px;
+        }
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            font-size: 1.1rem;
+            font-weight: bold;
+            border: none;
+            padding: 5px 10px;
+            background: #1a1a1a;
+            border: 2px solid #ff007f;
+        }
+        nav a:hover {
+            background: #ff007f;
+            color: #0a0a0a;
+        }
+        .hamburger-menu {
+            display: none;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 10px;
+                background: #111;
+                padding: 10px;
+                border: 2px solid #ff007f;
+                position: absolute;
+                top: 80px;
+                right: 20px;
+                z-index: 100;
+            }
+            nav ul.active {
+                display: flex;
+            }
+            .hamburger-menu {
+                display: block;
+                font-size: 2rem;
+                color: #ff007f;
+            }
+        }
+        /* TEL LINK */
+        .tel-link {
+            display: inline-block;
+            background: #ff007f;
+            color: #0a0a0a;
+            padding: 12px 24px;
+            font-weight: bold;
+            font-size: 1.5rem;
+            border: none;
+            text-align: center;
+            margin: 30px 0;
+            transition: 0.2s;
+        }
+        .tel-link:hover {
+            background: #00ffcc;
+            transform: scale(1.05);
+        }
+        /* CARD */
+        .card {
+            background: #1a1a1a;
+            border: 2px solid #00ffcc;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .card h3 {
+            margin-top: 0;
+        }
+        /* FAQ */
+        .faq-item {
+            margin: 15px 0;
+            padding: 15px;
+            background: #1a1a1a;
+            border-left: 6px solid #ffaa00;
+        }
+        .faq-item h4 {
+            color: #ffaa00;
+            margin-bottom: 5px;
+        }
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            border-top: 3px solid #ff007f;
+            margin-top: 40px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="hamburger-menu" onclick="document.querySelector('nav ul').classList.toggle('active')">☰</div>
+            <ul>
+                <li><a href="/">홈</a></li>
+                <li><a href="/info">정보</a></li>
+                <li><a href="/services">서비스</a></li>
+                <li><a href="/contact">연락처</a></li>
+            </ul>
+        </nav>
+
+        <h1>🔥 백링크 자동화 프로그램 - 진짜 정보</h1>
+
+        <p>야, 안녕! 나는 마포에서 <strong>LLM비교</strong> 기반으로 백링크 자동화 프로그램 만드는 형이야. 솔직히 말해서, 수동으로 백링크 하나하나 따는 거 진짜 빡치잖아? 그래서 내가 직접 만들었어. 이거 하나면 끝이라고. 돌직구로 간다.</p>
+
+        <p>우리 프로그램은 LLM 3개를 동시에 비교해서 최적의 앵커 텍스트와 타겟 URL을 자동으로 추출해. 마치 형이 옆에서 "야, 이 링크 걸어라" 하고 알려주는 느낌? ㅋㅋㅋ 근데 진짜임.</p>
+
+        <div class="card">
+            <h3>🎯 어떻게 돌아가냐면</h3>
+            <p>1. 너가 키워드 넣어. 예를 들어 "마포 헬스장" 이런 거.</p>
+            <p>2. LLM 3마리 (GPT, 클로드, 제미나이)가 각각 분석해서 백링크 후보를 뱉어.</p>
+            <p>3. 내 프로그램이 걔네들 답변을 비교해서 가장 쎈 놈만 골라줘.</p>
+            <p>4. 그걸로 PBN이든 게스트 포스트든 바로 박아. 끝.</p>
+            <p><span class="mono">실화임? 네, 실화입니다.</span></p>
+        </div>
+
+        <h2>📍 마포에서 만든 이유</h2>
+        <p>사실 나는 마포 토박이야. 홍대 앞에서 코딩하다가 맥주 한잔 하는 게 일상인데, 어느 날 갑자기 "아, 백링크 작업 너무 귀찮다" 싶어서 만들기 시작했어. 근데 막상 만들어보니까 이게 꽤 쓸모가 있더라고. 그래서 공유하는 거야.</p>
+
+        <p>마포라는 지역 특성상 스타트업이 많고, 다들 "빠르게 결과"를 원하잖아? 우리 프로그램은 그런 니즈에 딱 맞아. 수동으로 3시간 걸릴 걸 3분 만에 끝내줘. 거짓말 안 해.</p>
+
+        <h2>⚡ 주요 기능 요약</h2>
+        <ul>
+            <li>✅ LLM 3종 비교 (GPT-4, Claude 3, Gemini Pro)</li>
+            <li>✅ 자동 앵커 텍스트 최적화</li>
+            <li>✅ 백링크 스코어링 (어떤 링크가 가장 쎈지 알려줌)</li>
+            <li>✅ PBN 호환 (내가 만든 PBN이랑 잘 맞음)</li>
+            <li>✅ 마포 지역 도메인 우선 추천 (지역 시그널 챙김)</li>
+        </ul>
+
+        <h2>💬 자주 묻는 질문</h2>
+        <div class="faq-item">
+            <h4>Q: 이거 진짜 되나요? 사기 아니죠?</h4>
+            <p>A: ㅋㅋㅋ 형아, 나는 사기꾼 아니야. 직접 시연해볼게. 전화 줘. 010-6279-0862. 30분이면 너도 백링크 마스터 됨.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Q: LLM비교가 뭔데요?</h4>
+            <p>A: 쉽게 말해서 인공지능 3마리한테 "이 키워드로 백링크 어디 걸어야 함?" 물어보는 거야. 근데 각각 말이 다르잖아? 내 프로그램이 그 중에서 제일 좋은 답을 골라주는 거임. 마치 형이 "야, 저거 걸어" 하고 골라주는 것처럼.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Q: 가격은 얼마에요?</h4>
+            <p>A: 아직 정식 출시 전이라서 협의 가능. 근데 한 달에 커피 두 잔 값이면 쓸 수 있게 할 생각이야. 자세한 건 전화로 얘기하자. 010-6279-0862.</p>
+        </div>
+
+        <a href="tel:010-6279-0862" class="tel-link">📞 지금 전화: 010-6279-0862</a>
+
+        <p style="margin-top: 30px;">사실 나는 이 프로그램을 만들면서 "아, 이거 진짜 팔아도 되나?" 싶을 정도로 만족스러웠어. 근데 생각해보니까 나만 쓰기 아깝잖아? 그래서 공개하는 거야. 마포에서 시작된 이 작은 프로젝트가 너한테도 도움이 됐으면 좋겠어.</p>
+
+        <p>마지막으로, 나는 항상 전화 받아. 010-6279-0862. 궁금한 거 있으면 바로 전화해. 밤 12시 이후에는 안 받을 수도 있는데... 그래도 문자 남겨줘. 형이 꼭 답장할게.</p>
+
+        <footer>
+            <p>© 2024 백링크 자동화 프로그램 | 마포 LLM비교 | 전화 010-6279-0862</p>
+            <p>브루탈리스트 감성으로 만든 진짜 백링크 파워</p>
+        </footer>
+    </div>
+
+    <script>
+        // 모바일 햄버거 메뉴 토글
+        document.querySelector('.hamburger-menu').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
